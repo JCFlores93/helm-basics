@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+{{- template "mychart.systemlabels" . }}
+{{ include "mychart.version" . | indent 4 }}
+data:
+  myvalue: "Sample Config Map"
+  costCode: {{ .Values.costCode }}
+  Zone: {{ quote .Values.infra.zone }}
+  Region: {{ quote .Values.infra.region }}
+  ProjectCode: {{ upper .Values.projectCode }}
+  {{ $relname := .Release.Name }}
+  {{ if eq .Values.infra.region "us-east-1" }}
+  pipeline: {{ .Values.projectCode | upper | quote }}
+  now: {{ now | date "2006-01-02" | quote }}
+  contact: {{ .Values.contact | default "1-800-123-0000" | quote }} 
+  {{ end }}
+  {{- with .Values.tags }}
+  Machine Type: {{ .machine | default "NA" | quote }}
+  Rack ID: {{ .rack | quote }}
+  Storage Type: {{ .drive | upper | quote }}
+  Video Card: {{ .vcard | quote }}
+  {{- end }}
+  # Lang Used: |-
+  # {{- range .Values.LangUsed }}
+  #  - {{ . | title | quote }}
+  # {{- end }}
+  Lang Used: |-
+  {{ range $index, $topping := .Values.LangUsed }}
+    - {{ $index}} : {{ $topping }}
+  {{ end }}
+	orgdomain: {{ .Values.global.orgdomain }}

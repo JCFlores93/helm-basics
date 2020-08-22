@@ -1,0 +1,68 @@
+apiVersion: v1
+entries:
+  myrepo2:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-08-12T11:40:09.144436111-05:00"
+    description: My Another Chart
+    digest: a1ae16aaeae1107bd308ef60b44d0a69d248808511020635989d45c3f306529b
+    name: myrepo2
+    type: application
+    urls:
+    - charts/myrepo2-0.1.0.tgz
+    version: 0.1.0
+  pushdemo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-08-12T12:17:06.039271807-05:00"
+    description: Demo on push plugin
+    digest: f849d9f57fb2b01e367b00bb99e53a04df2f3f3980a2a53bd90bcbca753474cb
+    name: pushdemo
+    type: application
+    urls:
+    - charts/pushdemo-0.1.0.tgz
+    version: 0.1.0
+  repotest:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-08-12T11:32:18.105817217-05:00"
+    description: Repo Demo in Helm using Chartmuseum Version to 1.1.0
+    digest: 698c5ef0f4a1ccd2e78bb5c2c9435fd32430eea277c10899bcf7ee1c32a93bdf
+    name: repotest
+    type: application
+    urls:
+    - charts/repotest-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-08-12T11:21:29.979884491-05:00"
+    description: Repo Demo in Helm using Chartmuseum
+    digest: f0b643ecc21b6284ed7e7939caeb24a56e2f575cd33517580fdad20992404851
+    name: repotest
+    type: application
+    urls:
+    - charts/repotest-0.1.0.tgz
+    version: 0.1.0
+  upgrade-rlbk:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-08-12T12:44:06.932402395-05:00"
+    description: A Helm chart for Kubernetes and rollback details
+    digest: 421f10e6e79f8f19b9f7fbe389df7adae4b85d46bd3fd75df25522cdad8f8f95
+    name: upgrade-rlbk
+    type: application
+    urls:
+    - charts/upgrade-rlbk-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-08-12T12:38:55.469777682-05:00"
+    description: A Helm chart for Kubernetes and rollback details
+    digest: 92881a8bb7565bcb166a37c5b3e5e8f65c7eb995974ee42ae2c041bd34d7f844
+    name: upgrade-rlbk
+    type: application
+    urls:
+    - charts/upgrade-rlbk-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-08-12T12:44:22-05:00"
+serverInfo: {}

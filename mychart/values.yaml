@@ -1,0 +1,23 @@
+# Default values for mychart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+costCode: CC98112
+projectCode: aazzxxyy
+infra:
+  zone: a,b,c
+  region: us-east-1
+tags:
+  machine: frontdrive
+  rack: 4c
+  drive: ssd
+  vcard: 8GB
+LangUsed:
+  - Python
+  - Ruby
+  - Java
+  - Scala
+mysubchart:
+  dbhostname: prodmysqlnode
+global:
+  orgdomain: com.muthu4all
